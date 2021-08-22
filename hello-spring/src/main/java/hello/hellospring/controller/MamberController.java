@@ -18,6 +18,7 @@ public class MamberController {
     @Autowired
     public MamberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
