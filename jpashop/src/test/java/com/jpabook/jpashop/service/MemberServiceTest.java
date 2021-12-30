@@ -35,23 +35,23 @@ public class MemberServiceTest {
 
     }
 
-//    @Test(expected = IllegalStateException.class)
-//    public void 중복_회원_예외() throws Exception {
-//
-//        //Given
-//        Member member1 = new Member();
-//        member1.setName("kim");
-//
-//        Member member2 = new Member();
-//        member2.setName("kim");
-//
-//        //When
-//        memberService.join(member1);
-//        memberService.join(member2);
-//
-//        //Then
-//        fail("예외가 발생해야 한다.");
-//    }
+    @Test(expected = IllegalStateException.class)
+    public void 중복_회원_예외() throws Exception {
+
+        //Given
+        Member member1 = new Member();
+        member1.setName("kim");
+
+        Member member2 = new Member();
+        member2.setName("kim");
+
+        //When
+        memberService.join(member1);
+        memberService.join(member2);
+
+        //Then
+        fail("예외가 발생해야 한다.");
+    }
 
 
 
