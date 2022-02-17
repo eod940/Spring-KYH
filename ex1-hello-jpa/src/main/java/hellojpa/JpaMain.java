@@ -17,12 +17,13 @@ public class JpaMain {
 
         //code
         try {
-            Member member = new Member(200L, "a200");
-            em.persist(member);
+            Member member = em.find(Member.class, 150L);
+            member.setName("AA");
 
-            em.flush();
+            em.clear();
 
-//            em.persist(member1);
+            Member member2 = em.find(Member.class, 150L);
+
             System.out.println("================");
             tx.commit();
         } catch (Exception e) {
