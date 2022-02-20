@@ -19,9 +19,8 @@ public class JpaMain {
         try {
             Member member = new Member();
 
-            member.setId(2L);
-            member.setUsername("B");
-            member.setRoleType(RoleType.ADMIN);
+            member.setId("Id_A");
+
 
             System.out.println("================");
             em.persist(member);
