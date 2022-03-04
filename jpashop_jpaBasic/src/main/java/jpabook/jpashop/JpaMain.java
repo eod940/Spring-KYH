@@ -1,4 +1,4 @@
-package hellojpa;
+package jpabook.jpashop;
 
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
