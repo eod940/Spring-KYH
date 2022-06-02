@@ -17,26 +17,17 @@ public class JpaMain {
 
         //code
         try {
-            Member member1 = new Member();
-            member1.setUsername("A");
+            Member member = new Member();
+            member.setUsername("member1");
 
-            Member member2 = new Member();
-            member2.setUsername("B");
+            em.persist(member);
 
-            Member member3 = new Member();
-            member3.setUsername("C");
+            Team team = new Team();
+            team.setName("teamA");
+            //
+            team.getMembers().add(member);
 
-            System.out.println("================");
-
-            em.persist(member1);
-            em.persist(member2);
-            em.persist(member3);
-
-            System.out.println("member1 = " + member1.getId());
-            System.out.println("member2 = " + member2.getId());
-            System.out.println("member3 = " + member3.getId());
-
-            System.out.println("================");
+            em.persist(team);
 
             tx.commit();
         } catch (Exception e) {
